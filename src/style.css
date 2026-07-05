@@ -506,6 +506,12 @@ body {
   padding: 0 32px 80px;
 }
 
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .table-card {
   background: var(--md-surface);
   border-radius: 8px;
@@ -640,6 +646,7 @@ body {
   align-items: center;
   padding: 24px;
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .modal-card {
@@ -791,6 +798,10 @@ body {
     padding: 0 16px 40px;
   }
 
+  .table-card {
+    min-width: 580px;
+  }
+
   .table-header [data-sort]:not(.col-name) {
     font-size: 0;
   }
@@ -807,7 +818,16 @@ body {
     font-size: 0.7rem;
   }
 
+  .table-header .col-rate,
+  .table-row .col-rate-val {
+    text-align: center;
+  }
+
   .modal-card {
     padding: 24px;
+  }
+
+  .modal-table {
+    min-width: 450px;
   }
 }
