@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#E7EBF2" />
+    <meta name="description" content="KTU Statistics - Pass rates of KTU-affiliated engineering colleges across Kerala." />
+    <meta property="og:title" content="KTU STATS" />
+    <meta property="og:description" content="Pass rates of KTU-affiliated engineering colleges across Kerala." />
+    <meta property="og:image" content="/assets/meta/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="google-site-verification" content="ItSKGtz-IFK804MFH36K7-I8g1K3Y_n8NtQeO2Xwb0c" />
+    <title>KTU STATS</title>
+    <link rel="icon" href="/favicon.png" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F9H44CFM94"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F9H44CFM94');
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,light_mode" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <div class="brand">
+          <span class="brand-text">KTU STATS</span>
+        </div>
+        <div class="top-bar-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="material-symbols-outlined">dark_mode</span>
+          </button>
+          <a class="github-link" href="https://github.com/chayotic/ktu-stats" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/github/github-dark.png" class="gi-light" alt="GitHub" width="20" height="20" />
+            <img src="/assets/github/github-light.png" class="gi-dark" alt="GitHub" width="20" height="20" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-card">
+            <div class="card-section">
+              <h2 class="card-section-title">About the project</h2>
+              <p class="card-description">Pass rates of APJ Abdul Kalam Technological University-affiliated engineering colleges across Kerala.</p>
+            </div>
+            <div class="card-section">
+              <h2 class="card-section-title">Explore more projects</h2>
+              <p class="card-description"><a href="https://ktu-archive.vercel.app" target="_blank" class="project-link">KTU Archive</a> — Download 2024 Scheme Previous Year Question Papers & Notes from APJ Abdul Kalam Technological University.</p>
+            </div>
+            <div class="card-spacer"></div>
+            <div class="batch-pills">
+              <button class="batch-pill" data-batch="2015-19">2015 &ndash; 2019</button>
+              <button class="batch-pill" data-batch="2016-20">2016 &ndash; 2020</button>
+              <button class="batch-pill" data-batch="2017-21">2017 &ndash; 2021</button>
+              <button class="batch-pill" data-batch="2018-22">2018 &ndash; 2022</button>
+              <button class="batch-pill" data-batch="2020-24">2020 &ndash; 2024</button>
+              <button class="batch-pill active" data-batch="2021-25">2021 &ndash; 2025</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stats-card" id="statsCard">            
+            <div class="overall-stat">
+              <div class="overall-value" id="overallValue">--%</div>
+              <div class="overall-label">Overall Pass Rate</div>
+            </div>
+            <div class="top-colleges">
+              <div class="top-colleges-title">Top 5 Colleges By Pass Percentage</div>
+              <ul class="top-list" id="topList"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="search-section">
+      <div class="search-wrap">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search colleges..." />
+        <button class="search-clear" id="searchClear" style="display:none">
+          <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="table-card">
+        <div class="table-header" id="tableHeader">
+          <span class="col-rank" data-sort="index" data-short="#">Rank</span>
+          <span class="col-name" data-sort="name">College</span>
+          <span class="col-num" data-sort="reg" data-short="Reg">Registered</span>
+          <span class="col-num" data-sort="pass" data-short="Pass">Passed</span>
+          <span class="col-num col-rate" data-sort="rate" data-short="%">Pass %</span>
+        </div>
+        <div class="table-body" id="tableBody"></div>
+      </div>
+    </section>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-card">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <h2 class="modal-title" id="modalTitle">College Name</h2>
+        <div class="modal-chart-wrap">
+          <canvas id="historyChart"></canvas>
+        </div>
+        <table class="modal-table">
+          <thead>
+            <tr>
+              <th>Batch</th>
+              <th>Rank</th>
+              <th>Registered</th>
+              <th>Pass %</th>
+            </tr>
+          </thead>
+          <tbody id="modalTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

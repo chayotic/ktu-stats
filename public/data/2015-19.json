@@ -1,0 +1,722 @@
+[
+    {
+        "College":  "COLLEGE OF ENGINEERING TRIVANDRUM",
+        "Registered":  670,
+        "Passed":  469
+    },
+    {
+        "College":  "MUTHOOT INSTITUTE OF TECHNOLOGY \u0026 SCIENCE",
+        "Registered":  290,
+        "Passed":  196
+    },
+    {
+        "College":  "MODEL ENGINEERING COLLEGE",
+        "Registered":  391,
+        "Passed":  251
+    },
+    {
+        "College":  "GOVT. ENGINEERING COLLEGE, BARTON HILL",
+        "Registered":  320,
+        "Passed":  204
+    },
+    {
+        "College":  "RAJAGIRI SCHOOL OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  744,
+        "Passed":  471
+    },
+    {
+        "College":  "LBS INSTITUTE OF TECHNOLOGY FOR WOMEN, POOJAPPURA",
+        "Registered":  326,
+        "Passed":  204
+    },
+    {
+        "College":  "TKM COLLEGE OF ENGINEERING",
+        "Registered":  769,
+        "Passed":  465
+    },
+    {
+        "College":  "NSS COLLEGE OF ENGINEERING",
+        "Registered":  620,
+        "Passed":  346
+    },
+    {
+        "College":  "FEDERAL INSTITUTE OF SCIENCE AND TECHNOLOGY (FISAT)",
+        "Registered":  577,
+        "Passed":  324
+    },
+    {
+        "College":  "RAJIV GANDHI INSTITUTE OF TECHNOLOGY,KOTTAYAM",
+        "Registered":  326,
+        "Passed":  181
+    },
+    {
+        "College":  "SREE CHITRA THIRUNAL COLLEGE OF ENGINEERING",
+        "Registered":  443,
+        "Passed":  239
+    },
+    {
+        "College":  "GOVERNMENT COLLEGE OF ENGINEERING KANNUR",
+        "Registered":  365,
+        "Passed":  193
+    },
+    {
+        "College":  "SCMS SCHOOL OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  530,
+        "Passed":  280
+    },
+    {
+        "College":  "SAHRDAYA COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  428,
+        "Passed":  225
+    },
+    {
+        "College":  "GOVERNMENT ENGINEERING COLLEGE SREEKRISHNAPURAM",
+        "Registered":  250,
+        "Passed":  131
+    },
+    {
+        "College":  "GOVERNMENT ENGINEERING COLLEGE THRISSUR",
+        "Registered":  550,
+        "Passed":  286
+    },
+    {
+        "College":  "MAR ATHANASIUS COLLEGE OF ENGINEERING, KOTHAMANGALAM",
+        "Registered":  582,
+        "Passed":  302
+    },
+    {
+        "College":  "MARIAN ENGINEERING COLLEGE",
+        "Registered":  380,
+        "Passed":  196
+    },
+    {
+        "College":  "MAR BASELIOS COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  533,
+        "Passed":  267
+    },
+    {
+        "College":  "CHRIST COLLEGE OF ENGINEERING",
+        "Registered":  185,
+        "Passed":  92
+    },
+    {
+        "College":  "AMAL JYOTHI COLLEGE OF ENGINEERING",
+        "Registered":  634,
+        "Passed":  307
+    },
+    {
+        "College":  "SAINTGITS COLLEGE OF ENGINEERING",
+        "Registered":  474,
+        "Passed":  216
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING CHENGANNUR",
+        "Registered":  407,
+        "Passed":  185
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING KIDANGOOR",
+        "Registered":  227,
+        "Passed":  103
+    },
+    {
+        "College":  "VISWAJYOTHI COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  534,
+        "Passed":  242
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING KALLOOPPARA",
+        "Registered":  110,
+        "Passed":  46
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING, PATHANAPURAM",
+        "Registered":  120,
+        "Passed":  50
+    },
+    {
+        "College":  "SREE NARAYANA GURUKULAM COLLEGE OF ENGINEERING",
+        "Registered":  444,
+        "Passed":  184
+    },
+    {
+        "College":  "SREE BUDDHA COLLEGE OF ENGINEERING, AYATHIL, ELAVUMTHITTA",
+        "Registered":  92,
+        "Passed":  38
+    },
+    {
+        "College":  "VIMALJYOTHI ENGINEERING COLLEGE",
+        "Registered":  410,
+        "Passed":  169
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING, THALASSERY",
+        "Registered":  356,
+        "Passed":  145
+    },
+    {
+        "College":  "AHALIA SCHOOL OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  184,
+        "Passed":  73
+    },
+    {
+        "College":  "TKM INSTITUTE OF TECHNOLOGY",
+        "Registered":  261,
+        "Passed":  104
+    },
+    {
+        "College":  "TOC H INSTITUTE OF SCIENCE \u0026 TECHNOLOGY",
+        "Registered":  417,
+        "Passed":  166
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING TRIKARIPUR",
+        "Registered":  201,
+        "Passed":  79
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING,POONJAR",
+        "Registered":  72,
+        "Passed":  27
+    },
+    {
+        "College":  "SREEPATHY INSTITUTE OF MANAGEMENT AND TECHNOLOGY",
+        "Registered":  288,
+        "Passed":  108
+    },
+    {
+        "College":  "JYOTHI ENGINEERING COLLEGE",
+        "Registered":  375,
+        "Passed":  139
+    },
+    {
+        "College":  "GOVT. ENGINEERING COLLEGE, KOZHIKODE",
+        "Registered":  320,
+        "Passed":  118
+    },
+    {
+        "College":  "SREE BUDDHA COLLEGE OF ENGINEERING, PATTOOR",
+        "Registered":  328,
+        "Passed":  119
+    },
+    {
+        "College":  "NEHRU COLLEGE OF ENGINEERING AND RESEARCH CENTRE",
+        "Registered":  425,
+        "Passed":  154
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING, KOTTARAKKARA",
+        "Registered":  53,
+        "Passed":  19
+    },
+    {
+        "College":  "ADI SHANKARA INSTITUTE OF ENGG AND TECHNOLOGY",
+        "Registered":  409,
+        "Passed":  146
+    },
+    {
+        "College":  "ILAHIA COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  435,
+        "Passed":  152
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING VADAKARA",
+        "Registered":  279,
+        "Passed":  97
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING CHERTHALA",
+        "Registered":  173,
+        "Passed":  60
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING PERUMON",
+        "Registered":  249,
+        "Passed":  86
+    },
+    {
+        "College":  "THEJUS ENGINEERING COLLEGE",
+        "Registered":  452,
+        "Passed":  156
+    },
+    {
+        "College":  "BISHOP JEROME INSTITUTE",
+        "Registered":  148,
+        "Passed":  51
+    },
+    {
+        "College":  "ST JOSEPHS COLLEGE OF ENGINEERING AND TECHNOLOGY PALAI",
+        "Registered":  366,
+        "Passed":  126
+    },
+    {
+        "College":  "MOHANDAS COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  326,
+        "Passed":  112
+    },
+    {
+        "College":  "VIDYA ACADEMY OF SCIENCE AND TECHNOLOGY",
+        "Registered":  594,
+        "Passed":  203
+    },
+    {
+        "College":  "VALIA KOONAMBAIKULATHAMMA COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  259,
+        "Passed":  88
+    },
+    {
+        "College":  "MAR BASELIOS INSTITUTE OF TECHNOLOGY AND SCIENCE",
+        "Registered":  286,
+        "Passed":  96
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING AND MANAGEMENT, PUNNAPRA",
+        "Registered":  242,
+        "Passed":  79
+    },
+    {
+        "College":  "PROVIDENCE COLLEGE OF ENGINEERING",
+        "Registered":  100,
+        "Passed":  32
+    },
+    {
+        "College":  "VIDYA ACADEMY OF SCIENCE AND TECHNOLOGY TECHNICAL CAMPUS",
+        "Registered":  201,
+        "Passed":  64
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING KARUNAGAPPALLY",
+        "Registered":  110,
+        "Passed":  35
+    },
+    {
+        "College":  "RAJADHANI INSTITUTE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  325,
+        "Passed":  103
+    },
+    {
+        "College":  "TOMS COLLEGE OF ENGINEERING",
+        "Registered":  19,
+        "Passed":  6
+    },
+    {
+        "College":  "CARMEL COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  168,
+        "Passed":  53
+    },
+    {
+        "College":  "MGM COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  213,
+        "Passed":  67
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING ADOOR",
+        "Registered":  303,
+        "Passed":  93
+    },
+    {
+        "College":  "AMMINI COLLEGE OF ENGINEERING",
+        "Registered":  199,
+        "Passed":  61
+    },
+    {
+        "College":  "MUSALIAR COLLEGE OF ENGINEERING AND TECHNOLOGY PATHANAMTHITTA",
+        "Registered":  236,
+        "Passed":  71
+    },
+    {
+        "College":  "CHRIST KNOWLEDGE CITY",
+        "Registered":  141,
+        "Passed":  42
+    },
+    {
+        "College":  "BASELIOS MATHEWS II COLLEGE OF ENGINEERING",
+        "Registered":  217,
+        "Passed":  63
+    },
+    {
+        "College":  "SNGIST GROUP OF INSTITUTIONS",
+        "Registered":  205,
+        "Passed":  59
+    },
+    {
+        "College":  "KMCT COLLEGE OF ENGINEERING FOR WOMEN",
+        "Registered":  119,
+        "Passed":  34
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING ATTINGAL",
+        "Registered":  141,
+        "Passed":  40
+    },
+    {
+        "College":  "VIJNAN INSTITUTE OF SCIENCE AND TECHNOLOGY (VISAT)",
+        "Registered":  191,
+        "Passed":  54
+    },
+    {
+        "College":  "GOVERNMENT ENGINEERING COLLEGE IDUKKI",
+        "Registered":  274,
+        "Passed":  76
+    },
+    {
+        "College":  "MES COLLEGE OF ENGINEERING, KUTTIPPURAM",
+        "Registered":  400,
+        "Passed":  110
+    },
+    {
+        "College":  "PRIME COLLEGE OF ENGINEERING",
+        "Registered":  48,
+        "Passed":  13
+    },
+    {
+        "College":  "MET\u0027S SCHOOL OF ENGINEERING, MALA",
+        "Registered":  148,
+        "Passed":  40
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING MUNNAR",
+        "Registered":  156,
+        "Passed":  42
+    },
+    {
+        "College":  "SRI VELLAPPALLY NATESAN COLLEGE OF ENGINEERING",
+        "Registered":  353,
+        "Passed":  95
+    },
+    {
+        "College":  "SNM INSTITUTE OF MANAGEMENT AND TECHNOLOGY",
+        "Registered":  224,
+        "Passed":  60
+    },
+    {
+        "College":  "ST. THOMAS INSTITUTE FOR SCIENCE \u0026 TECHNOLOGY",
+        "Registered":  128,
+        "Passed":  34
+    },
+    {
+        "College":  "GURUDEVA INSTITUTE OF SCIENCE AND TECHNOLOGY",
+        "Registered":  151,
+        "Passed":  40
+    },
+    {
+        "College":  "BELIEVERS CHURCH CAARMEL ENGINEERING COLLEGE",
+        "Registered":  216,
+        "Passed":  57
+    },
+    {
+        "College":  "ROYAL COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  360,
+        "Passed":  95
+    },
+    {
+        "College":  "ALBERTIAN INSTITUTE OF SCIENCE AND TECHNOLOGY (AISAT)- TECHNICAL CAMPUS",
+        "Registered":  163,
+        "Passed":  43
+    },
+    {
+        "College":  "UNIVERSAL ENGINEERING COLLEGE",
+        "Registered":  255,
+        "Passed":  66
+    },
+    {
+        "College":  "JAWAHARLAL COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  350,
+        "Passed":  90
+    },
+    {
+        "College":  "LOURDES MATHA COLLEGE OF SCIENCE AND TECHNOLOGY",
+        "Registered":  245,
+        "Passed":  63
+    },
+    {
+        "College":  "HEERA COLLEGE OF ENGINEERING AND TECHNOLOGY (HCET)",
+        "Registered":  205,
+        "Passed":  52
+    },
+    {
+        "College":  "LBS COLLEGE OF ENGINEERING",
+        "Registered":  432,
+        "Passed":  107
+    },
+    {
+        "College":  "NORTH MALABAR INSTITUTE OF TECHNOLOGY",
+        "Registered":  141,
+        "Passed":  34
+    },
+    {
+        "College":  "ST.THOMAS COLLEGE OF ENGINEERING AND TECHNOLOGY, MATTANUR",
+        "Registered":  150,
+        "Passed":  36
+    },
+    {
+        "College":  "PRS COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  140,
+        "Passed":  33
+    },
+    {
+        "College":  "MANGALAM COLLEGE OF ENGINEERING",
+        "Registered":  332,
+        "Passed":  78
+    },
+    {
+        "College":  "UKF COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  183,
+        "Passed":  42
+    },
+    {
+        "College":  "MAR BASELIOS CHRISTIAN COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  203,
+        "Passed":  47
+    },
+    {
+        "College":  "JOHN COX MEMORIAL CSI INSTITUTE OF TECHNOLOGY",
+        "Registered":  139,
+        "Passed":  31
+    },
+    {
+        "College":  "YOUNUS COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  269,
+        "Passed":  60
+    },
+    {
+        "College":  "MALABAR COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  158,
+        "Passed":  35
+    },
+    {
+        "College":  "ILM COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  107,
+        "Passed":  23
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING ARANMULA",
+        "Registered":  131,
+        "Passed":  28
+    },
+    {
+        "College":  "SARABHAI INSTITUTE OF SCIENCE AND TECHNOLOGY",
+        "Registered":  137,
+        "Passed":  29
+    },
+    {
+        "College":  "MES INSTITUTE OF TECHNOLOGY AND MANAGEMENT",
+        "Registered":  155,
+        "Passed":  31
+    },
+    {
+        "College":  "KMEA ENGINEERING COLLEGE",
+        "Registered":  278,
+        "Passed":  54
+    },
+    {
+        "College":  "MOUNT ZION INSTITUTE OF SCIENCE AND TECHNOLOGY",
+        "Registered":  36,
+        "Passed":  7
+    },
+    {
+        "College":  "GOVERNMENT ENGINEERING COLLEGE, WAYANAD",
+        "Registered":  292,
+        "Passed":  56
+    },
+    {
+        "College":  "COLLEGE OF ENGINEERING \u0026 TECHNOLOGY-PAYYANUR",
+        "Registered":  136,
+        "Passed":  25
+    },
+    {
+        "College":  "ACE COLLEGE OF ENGINEERING",
+        "Registered":  143,
+        "Passed":  27
+    },
+    {
+        "College":  "HOLY GRACE ACADEMY OF ENGINEERING",
+        "Registered":  72,
+        "Passed":  13
+    },
+    {
+        "College":  "JAIBHARATH COLLEGE OF MANAGEMENT \u0026 ENGINEERING TECHNOLOGY",
+        "Registered":  106,
+        "Passed":  19
+    },
+    {
+        "College":  "MES COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  128,
+        "Passed":  22
+    },
+    {
+        "College":  "INDIRA GANDHI INSTITUTE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  136,
+        "Passed":  23
+    },
+    {
+        "College":  "SADGURU SWAMY NITHYANANDA INSTITUTE OF TECHNOLGY",
+        "Registered":  77,
+        "Passed":  13
+    },
+    {
+        "College":  "FOCUS INSTITUTE OF SCIENCE AND TECHNOLOGY",
+        "Registered":  149,
+        "Passed":  25
+    },
+    {
+        "College":  "ERANAD KNOWLEDGECITY TECHNICAL CAMPUS",
+        "Registered":  176,
+        "Passed":  29
+    },
+    {
+        "College":  "KMCT COLLEGE OF ENGINEERING",
+        "Registered":  104,
+        "Passed":  17
+    },
+    {
+        "College":  "MOUNT ZION COLLEGE OF ENGINEERING",
+        "Registered":  109,
+        "Passed":  17
+    },
+    {
+        "College":  "AL-AMEEN COLLEGE, KULAPPULLY, SHORANUR-2",
+        "Registered":  246,
+        "Passed":  38
+    },
+    {
+        "College":  "KOTTAYAM INSTITUTE OF TECHNOLOGY AND SCIENCE",
+        "Registered":  111,
+        "Passed":  17
+    },
+    {
+        "College":  "SREE NARAYANA INSTITUTE OF TECHNOLOGY, ADOOR",
+        "Registered":  120,
+        "Passed":  18
+    },
+    {
+        "College":  "NIRMALA COLLEGE OF ENGINEERING.",
+        "Registered":  115,
+        "Passed":  17
+    },
+    {
+        "College":  "ILAHIA SCHOOL OF SCIENCE AND TECHNOLOGY",
+        "Registered":  122,
+        "Passed":  18
+    },
+    {
+        "College":  "K R GOURIAMMA COLLEGE OF ENGINEERING",
+        "Registered":  48,
+        "Passed":  7
+    },
+    {
+        "College":  "IES COLLEGE OF ENGINEERING",
+        "Registered":  131,
+        "Passed":  19
+    },
+    {
+        "College":  "AWH ENGINEERING COLLEGE",
+        "Registered":  134,
+        "Passed":  19
+    },
+    {
+        "College":  "MEA ENGINEERING COLLEGE, PERINTHALMANNA",
+        "Registered":  346,
+        "Passed":  49
+    },
+    {
+        "College":  "BASELIOS THOMAS I CATHOLICOSE COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  108,
+        "Passed":  15
+    },
+    {
+        "College":  "M G COLLEGE OF ENGINEERING",
+        "Registered":  60,
+        "Passed":  8
+    },
+    {
+        "College":  "MALABAR INSTITUTE OF TECHNOLOGY",
+        "Registered":  181,
+        "Passed":  23
+    },
+    {
+        "College":  "MUSALIAR COLLEGE OF ENGINEERING",
+        "Registered":  98,
+        "Passed":  12
+    },
+    {
+        "College":  "TRINITY COLLEGE OF ENGINEERING",
+        "Registered":  90,
+        "Passed":  11
+    },
+    {
+        "College":  "SHAHUL HAMEED MEMORIAL ENGINEERING COLLEGE",
+        "Registered":  91,
+        "Passed":  11
+    },
+    {
+        "College":  "COCHIN COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  275,
+        "Passed":  30
+    },
+    {
+        "College":  "MUSLIM ASSOCIATION COLLEGE OF ENGINEERING",
+        "Registered":  167,
+        "Passed":  17
+    },
+    {
+        "College":  "SREE NARAYANA GURU COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  129,
+        "Passed":  13
+    },
+    {
+        "College":  "AXIS COLLEGE OF ENGINEERING \u0026 TECHNOLOGY",
+        "Registered":  94,
+        "Passed":  9
+    },
+    {
+        "College":  "M.DASAN INSTITUTE OF TECHNOLOGY",
+        "Registered":  179,
+        "Passed":  16
+    },
+    {
+        "College":  "AL AZHAR COLLEGE OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  45,
+        "Passed":  4
+    },
+    {
+        "College":  "MATHA COLLEGE OF TECHNOLOGY",
+        "Registered":  112,
+        "Passed":  9
+    },
+    {
+        "College":  "YOUNUS INSTITUTE OF TECHNOLOGY",
+        "Registered":  132,
+        "Passed":  10
+    },
+    {
+        "College":  "ST.THOMAS COLLEGE OF ENGINEERING \u0026 TECHNOLOGY CHENGANNUR",
+        "Registered":  173,
+        "Passed":  13
+    },
+    {
+        "College":  "COCHIN INSTITUTE OF SCIENCE AND TECHNOLOGY",
+        "Registered":  172,
+        "Passed":  12
+    },
+    {
+        "College":  "SREE ERNAKULATHAPPAN COLLEGE OF ENGINEERING AND MANAGEMENT",
+        "Registered":  63,
+        "Passed":  4
+    },
+    {
+        "College":  "VEDAVYASA INSTITUTE OF TECHNOLOGY",
+        "Registered":  92,
+        "Passed":  5
+    },
+    {
+        "College":  "HINDUSTAN COLLEGE OF ENGINEERING",
+        "Registered":  57,
+        "Passed":  0
+    },
+    {
+        "College":  "PINNACLE SCHOOL OF ENGINEERING AND TECHNOLOGY",
+        "Registered":  1,
+        "Passed":  0
+    }
+]
