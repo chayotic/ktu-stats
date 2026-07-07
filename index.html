@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="hero-stats">
-          <div class="stats-card" id="statsCard">            
+          <div class="stats-card">            
             <div class="overall-stat">
               <div class="overall-value" id="overallValue">--%</div>
               <div class="overall-label">Overall Pass Rate</div>
@@ -97,12 +97,13 @@
           <div class="table-header" id="tableHeader">
             <span class="col-rank" data-sort="index" data-short="#">Rank</span>
             <span class="col-name" data-sort="name">College</span>
-            <span class="col-num" data-sort="reg" data-short="Reg">Registered</span>
-            <span class="col-num" data-sort="pass" data-short="Pass">Passed</span>
+            <span class="col-num" data-sort="reg" data-short="Reg.">Registered</span>
+            <span class="col-num" data-sort="pass" data-short="Passed">Passed</span>
             <span class="col-num col-rate" data-sort="rate" data-short="Pass %">Pass %</span>
           </div>
           <div class="table-body" id="tableBody"></div>
         </div>
+        <div class="row-count" id="rowCount"></div>
       </div>
     </section>
 
@@ -110,6 +111,14 @@
       <div class="modal-card">
         <button class="modal-close" id="modalClose">&times;</button>
         <h2 class="modal-title" id="modalTitle">College Name</h2>
+        <div class="modal-graph-types" id="graphTypes">
+          <button class="graph-type-btn active" data-type="rate">Pass %</button>
+          <button class="graph-type-btn" data-type="reg">Registered</button>
+          <span class="chart-style-group">
+            <button class="graph-type-btn chart-style-btn" data-chart="line">Line</button>
+            <button class="graph-type-btn chart-style-btn active" data-chart="bar">Bar</button>
+          </span>
+        </div>
         <div class="modal-chart-wrap">
           <canvas id="historyChart"></canvas>
         </div>
@@ -119,7 +128,8 @@
               <tr>
                 <th>Batch</th>
                 <th>Rank</th>
-                <th>Registered</th>
+                <th>Reg</th>
+                <th>Passed</th>
                 <th>Pass %</th>
               </tr>
             </thead>

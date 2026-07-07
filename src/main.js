@@ -5,12 +5,12 @@ import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
 const batchMap = {
-  "2015-19": { label: "2015-19", file: "2015-19.json", display: "2015 - 2019" },
-  "2016-20": { label: "2016-20", file: "2016-20.json", display: "2016 - 2020" },
-  "2017-21": { label: "2017-21", file: "2017-21.json", display: "2017 - 2021" },
-  "2018-22": { label: "2018-22", file: "2018-22.json", display: "2018 - 2022" },
-  "2020-24": { label: "2020-24", file: "2020-24.json", display: "2020 - 2024" },
-  "2021-25": { label: "2021-25", file: "2021-25.json", display: "2021 - 2025" },
+  "2015-19": { file: "2015-19.json" },
+  "2016-20": { file: "2016-20.json" },
+  "2017-21": { file: "2017-21.json" },
+  "2018-22": { file: "2018-22.json" },
+  "2020-24": { file: "2020-24.json" },
+  "2021-25": { file: "2021-25.json" },
 };
 
 const historyBatches = [
@@ -121,7 +121,12 @@ function renderTable(data, sortKey, sortDir) {
     document.querySelectorAll(".table-row").forEach((row) => {
       row.addEventListener("click", () => openModal(row.dataset.college));
     });
+
+    document.getElementById("rowCount").textContent = `${sorted.length} result${sorted.length !== 1 ? "s" : ""} shown`;
+    document.getElementById("rowCount").style.display = isFiltered ? "" : "none";
   }
+
+  updateSortIndicators();
 }
 
 function updateSortIndicators() {
@@ -161,11 +166,15 @@ async function loadBatch(batch) {
       .sort((a, b) => b.rate - a.rate)
       .slice(0, 5)
       .map(
-        (c) => `
-      <li><span>${c.College}</span><span>${c.rate.toFixed(2)}%</span></li>
+        (c, i) => `
+      <li data-college="${c.College}"><span>${i + 1}. ${c.College}</span><span>${c.rate.toFixed(2)}%</span></li>
     `
       )
       .join("");
+
+    document.querySelectorAll(".top-list li").forEach((li) => {
+      li.addEventListener("click", () => openModal(li.dataset.college));
+    });
 
     renderTable(data, sortState.key, sortState.dir);
   } catch {
@@ -204,81 +213,6 @@ async function openModal(college) {
 
     modalTitle.textContent = college;
 
-    if (chartInstance) chartInstance.destroy();
-    const t = getChartTheme();
-    chartInstance = new Chart(historyChart, {
-      type: "line",
-      data: {
-        labels: history.map((h) => h.label),
-        datasets: [
-          {
-            label: "Pass %",
-            data: history.map((h) =>
-              h.rate === null ? null : parseFloat(h.rate)
-            ),
-            borderColor: t.line,
-            backgroundColor: t.fill,
-            fill: true,
-            tension: 0.3,
-            pointBackgroundColor: t.line,
-            pointBorderColor: t.tooltipBg,
-            pointBorderWidth: 2,
-            pointRadius: 4,
-            pointHoverRadius: 6,
-            spanGaps: false,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            backgroundColor: t.tooltipBg,
-            titleColor: t.tooltipTitle,
-            bodyColor: t.tooltipBody,
-            titleFont: {
-              family: "'Google Sans Code Variable', monospace",
-              size: 11,
-            },
-            bodyFont: {
-              family: "'Google Sans Code Variable', monospace",
-              size: 11,
-            },
-            borderColor: t.border,
-            borderWidth: 1,
-            padding: 12,
-            cornerRadius: 10,
-          },
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100,
-            grid: { color: t.grid, drawBorder: false },
-            ticks: {
-              color: t.text,
-              font: {
-                family: "'Google Sans Code Variable', monospace",
-                size: 10,
-              },
-            },
-          },
-          x: {
-            grid: { display: false },
-            ticks: {
-              color: t.text,
-              font: {
-                family: "'Google Sans Code Variable', monospace",
-                size: 10,
-              },
-            },
-          },
-        },
-      },
-    });
-
     modalTableBody.innerHTML = history
       .map(
         (h) => `
@@ -286,6 +220,7 @@ async function openModal(college) {
         <td>${h.label}</td>
         <td>${h.rank}</td>
         <td>${h.reg}</td>
+        <td>${h.pass}</td>
         <td>${h.rate ? `${h.rate}%` : "--"}</td>
       </tr>
     `
@@ -293,6 +228,8 @@ async function openModal(college) {
       .join("");
 
     modalOverlay.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    renderChart(history, "rate");
   } catch (e) {
     console.error("Failed to load history:", e);
   }
@@ -300,9 +237,9 @@ async function openModal(college) {
 
 document.querySelectorAll(".batch-pill").forEach((btn) => {
   btn.addEventListener("click", () => {
+    closeModal();
     loadBatch(btn.dataset.batch);
     searchInput.value = "";
-    modalOverlay.style.display = "none";
   });
 });
 
@@ -334,27 +271,158 @@ document.getElementById("searchClear").addEventListener("click", () => {
   document.getElementById("searchClear").style.display = "none";
 });
 
-modalClose.addEventListener("click", () => {
+function closeModal() {
   modalOverlay.style.display = "none";
-});
+  document.body.style.overflow = "";
+}
+
+modalClose.addEventListener("click", closeModal);
 
 modalOverlay.addEventListener("click", (e) => {
-  if (e.target === modalOverlay) modalOverlay.style.display = "none";
+  if (e.target === modalOverlay) closeModal();
 });
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modalOverlay.style.display === "flex") {
-    modalOverlay.style.display = "none";
+    closeModal();
+  }
+  if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+    e.preventDefault();
+    searchInput.focus();
+  }
+  if (e.key === "/" && !["INPUT", "TEXTAREA"].includes(e.target.tagName)) {
+    e.preventDefault();
+    searchInput.focus();
   }
 });
 
 loadBatch("2021-25");
 
+let currentHistory = [];
+let currentChartStyle = "bar";
+
+function renderChart(history, type) {
+  currentHistory = history;
+  if (chartInstance) {
+    chartInstance.destroy();
+    chartInstance = null;
+  }
+  historyChart.width = historyChart.width;
+  const t = getChartTheme();
+
+  document.querySelectorAll(".graph-type-btn[data-type]").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.type === type);
+  });
+
+  let label, data, yMax;
+  if (type === "rate") {
+    label = "Pass %";
+    data = history.map((h) => (h.rate === null ? null : parseFloat(h.rate)));
+    yMax = 100;
+  } else {
+    label = "Registered";
+    data = history.map((h) => (h.reg === "-" ? null : h.reg));
+    yMax = undefined;
+  }
+
+  const isBar = currentChartStyle === "bar";
+
+  chartInstance = new Chart(historyChart, {
+    type: isBar ? "bar" : "line",
+    data: {
+      labels: history.map((h) => h.label),
+      datasets: [
+        {
+          label,
+          data,
+          borderColor: t.line,
+          backgroundColor: isBar ? t.line : t.fill,
+          fill: !isBar,
+          tension: isBar ? undefined : 0.3,
+          pointBackgroundColor: t.line,
+          pointBorderColor: t.tooltipBg,
+          pointBorderWidth: 2,
+          pointRadius: isBar ? 0 : 4,
+          pointHoverRadius: isBar ? 0 : 6,
+          spanGaps: false,
+          ...(isBar && { borderRadius: 4, borderSkipped: false }),
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: {
+        duration: 600,
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: t.tooltipBg,
+          titleColor: t.tooltipTitle,
+          bodyColor: t.tooltipBody,
+          titleFont: {
+            family: "'Google Sans Code Variable', monospace",
+            size: 11,
+          },
+          bodyFont: {
+            family: "'Google Sans Code Variable', monospace",
+            size: 11,
+          },
+          borderColor: t.border,
+          borderWidth: 1,
+          padding: 12,
+          cornerRadius: 10,
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ...(yMax !== undefined && { max: yMax }),
+          grid: { color: t.grid, drawBorder: false },
+          ticks: {
+            color: t.text,
+            font: {
+              family: "'Google Sans Code Variable', monospace",
+              size: 10,
+            },
+          },
+        },
+        x: {
+          grid: { display: false },
+          ticks: {
+            color: t.text,
+            font: {
+              family: "'Google Sans Code Variable', monospace",
+              size: 10,
+            },
+          },
+        },
+      },
+    },
+  });
+}
+
+document.getElementById("graphTypes").addEventListener("click", (e) => {
+  const typeBtn = e.target.closest(".graph-type-btn[data-type]");
+  if (typeBtn && !typeBtn.classList.contains("active")) {
+    renderChart(currentHistory, typeBtn.dataset.type);
+    return;
+  }
+  const styleBtn = e.target.closest(".chart-style-btn");
+  if (styleBtn && !styleBtn.classList.contains("active")) {
+    document.querySelectorAll(".chart-style-btn").forEach((b) => b.classList.remove("active"));
+    styleBtn.classList.add("active");
+    currentChartStyle = styleBtn.dataset.chart;
+    renderChart(currentHistory, document.querySelector(".graph-type-btn[data-type].active")?.dataset.type || "rate");
+  }
+});
+
 function getChartTheme() {
   const isDark = document.documentElement.classList.contains("dark");
   return {
-    text: isDark ? "rgba(255,255,255,0.4)" : "rgba(29, 30, 32,0.3)",
-    grid: isDark ? "rgba(255,255,255,0.06)" : "rgba(29, 30, 32,0.06)",
+    text: isDark ? "rgba(255,255,255,0.4)" : "rgba(29, 30, 32,0.7)",
+    grid: isDark ? "rgba(255,255,255,0.06)" : "rgba(29, 30, 32,0.15)",
     border: isDark ? "rgba(255,255,255,0.08)" : "rgba(29, 30, 32,0.08)",
     line: isDark ? "#e0e0e4" : "#1D1E20",
     fill: isDark ? "rgba(255,255,255,0.04)" : "rgba(26,29,35,0.08)",
@@ -367,9 +435,10 @@ function getChartTheme() {
 function applyChartTheme() {
   if (!chartInstance) return;
   const t = getChartTheme();
-  chartInstance.data.datasets[0].borderColor = t.line;
-  chartInstance.data.datasets[0].backgroundColor = t.fill;
-  chartInstance.data.datasets[0].pointBackgroundColor = t.line;
+  const ds = chartInstance.data.datasets[0];
+  ds.borderColor = t.line;
+  ds.backgroundColor = chartInstance.config.type === "bar" ? t.line : t.fill;
+  if (ds.pointBackgroundColor) ds.pointBackgroundColor = t.line;
   chartInstance.options.plugins.tooltip.backgroundColor = t.tooltipBg;
   chartInstance.options.plugins.tooltip.titleColor = t.tooltipTitle;
   chartInstance.options.plugins.tooltip.bodyColor = t.tooltipBody;

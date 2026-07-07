@@ -25,11 +25,6 @@
   --transition: 0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
-::selection {
-  background: var(--md-primary-container);
-  color: var(--md-on-primary-container);
-}
-
 .dark {
   --md-background: #070708;
   --md-on-background: #e0e0e4;
@@ -305,6 +300,10 @@ body {
   width: 100%;
 }
 
+.card-section {
+  margin-bottom: 8px;
+}
+
 .card-section-title {
   font-size: 18px;
   font-weight: 500;
@@ -408,8 +407,7 @@ body {
 .top-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-height: 140px;
+  gap: 0;
   list-style: none;
 }
 
@@ -417,7 +415,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0;
+  gap: 16px;
+  padding: 10px 0;
   font-size: 0.8rem;
   color: var(--md-on-surface-variant);
   border-bottom: 1px solid rgba(29, 30, 32, 0.06);
@@ -468,11 +467,16 @@ body {
 }
 
 .row-count {
-  display: none;
   font-size: 0.72rem;
   color: var(--md-on-surface-variant);
   font-variant-numeric: tabular-nums;
-  padding-top: 6px;
+  padding: 6px 4px 0;
+}
+
+.chart-style-group {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
 }
 
 .search-clear {
@@ -693,6 +697,40 @@ body {
   padding-right: 40px;
 }
 
+.modal-graph-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.graph-type-btn {
+  background: transparent;
+  border: 1px solid var(--md-outline-variant);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--md-on-surface-variant);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.graph-type-btn.active {
+  border-radius: 100px;
+  background: var(--md-on-surface);
+  color: var(--md-surface);
+  border-color: var(--md-on-surface);
+}
+
+@media (hover: hover) {
+  .graph-type-btn:hover:not(.active) {
+    border-color: var(--md-on-surface);
+    color: var(--md-on-surface);
+  }
+}
+
 .modal-chart-wrap {
   position: relative;
   height: 200px;
@@ -711,7 +749,7 @@ body {
 
 .modal-table th,
 .modal-table td {
-  padding: 10px 12px;
+  padding: 10px 8px;
   font-size: 0.78rem;
   text-align: center;
   color: var(--md-on-surface-variant);
@@ -720,10 +758,10 @@ body {
 
 .modal-table th {
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--md-outline);
+  color: var(--md-on-surface-variant);
 }
 
 .modal-table tbody tr:last-child td {
@@ -828,6 +866,12 @@ body {
   }
 
   .modal-table {
-    min-width: 450px;
+    min-width: 420px;
+  }
+
+  .modal-table th,
+  .modal-table td {
+    padding: 8px 6px;
+    font-size: 0.7rem;
   }
 }
